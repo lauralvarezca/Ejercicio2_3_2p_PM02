@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejer2_3.Views.Lista"
+             Title="Lista">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="Lista_Audios" ItemTapped="Lista_Audios_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout Orientation="Horizontal" Padding="10">
+                                    <Label Text="{Binding id}" WidthRequest="50" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding fecha}" WidthRequest="150" HorizontalTextAlignment="Center"/>
+                                    <Label Text="{Binding descripcion}" VerticalTextAlignment="Center"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button Text="Pausar Audio" Clicked="OnPausarAudioClicked" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="10"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
